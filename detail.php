@@ -34,14 +34,15 @@ if ($id !== null && $id !== false) {
 <body>
 <h1><?=$category['naam'] ?></h1>
 <table>
-<?php foreach ($bikes as $bike): ?>
-<tr>
-    <td>
-        <?=$bike['type']?>
-    </td>
-    <td><a href="update.php?id=<?= $bike['id'] ?>"> update</a></td>
-</tr>
-<?php endforeach;?>
+    <?php foreach ($bikes as $bike): ?>
+        <tr>
+            <td>
+                <?=$bike['type']?>
+            </td>
+            <td><a href="update.php?id=<?= $bike['id'] ?>"> update</a></td>
+            <td><a href="delete.php?id=<?= $bike['id'] ?>">delete</a></td>
+        </tr>
+    <?php endforeach;?>
 </table>
 </body>
 </html>
